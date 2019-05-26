@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Toggle-Switch</title>
+	<style>
+		input[type="checkbox"] {
+			width: 0;
+			height: 0;
+			visibility: hidden;
+		}
+		label {
+			display: block;
+			width: 200px;
+			height: 100px;
+			background-color: #eee;
+			border-radius: 100px;
+			position: relative;
+			text-indent: -9999px;
+			transition: background 0.4s;
+			cursor: pointer;
+			overflow: hidden;
+		}
+		label:before {
+			display: block;
+			content: "";
+			position: absolute;
+			top:5px;
+			left: 5px;
+			width: 90px;
+			height: 90px;
+			border-radius: 45px;
+			background-color: #fff;
+			transition: all 0.4s;
+
+		}
+		input:checked + label {
+			background: #00a1d6;
+		}
+		input:checked + label:before {
+			left: calc(100% - 5px);
+			transform: translateX(-100%);
+		}
+		label:active:before {
+			width: 120px;
+		}
+		
+		h1 {
+			font-family: fantasy;
+			font-weight: bold;
+			color: orange;
+		}
+
+		body {
+			display: flex;
+			height: 100vh;
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center;
+			flex-direction: column;
+		}
+	</style>
+</head>
+<body>
+	<h1>Toggle Swith</h1>
+	<input type="checkbox" id="switch">
+	<label for="switch">Toggle</label>
+</body>
+</html>
