@@ -5,3 +5,4 @@
 3. 导航栏，利用伪类实现
 4. 按钮hover效果，利用伪类和过渡效果
 5. 文字图片背景， 利用 -webkit-fill-color, -webkit-background-clip 实现
+6. 发光的文字， 利用animation keyframe，多层阴影叠加，滤镜效果，动画延迟
