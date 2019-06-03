@@ -9,3 +9,4 @@
 7. Loading 效果，利用animation， transform-origin的技术
 8. 圆形loading, 利用伪类 + animation
 9. 背景颜色渐变，利用linear-gradient
+10. 搜索框，利用伪类 + transition delay 效果实现
