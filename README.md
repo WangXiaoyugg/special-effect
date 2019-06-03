@@ -8,3 +8,4 @@
 6. 发光的文字， 利用animation keyframe，多层阴影叠加，滤镜效果，动画延迟
 7. Loading 效果，利用animation， transform-origin的技术
 8. 圆形loading, 利用伪类 + animation
+9. 背景颜色渐变，利用linear-gradient
