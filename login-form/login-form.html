@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animated Login Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: fantasy;
+            background: #34495e
+        }
+        .box {
+            width: 300px;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: #191919;
+        }
+        .box h1 {
+           color:white;
+           text-transform: uppercase;
+           font-weight: 600; 
+        }
+        .box input[type="text"], .box input[type="password"] {
+            border: 2px solid #3498db;
+            background: none;
+            text-align: center;
+            color: #fff;
+            padding: 14px 10px;
+            display: block;
+            width: 200px;
+            outline: none;
+            border-radius: 24px;
+            margin: 20px auto;
+            transition: 0.25s;
+        }
+        .box input[type="text"]:focus, 
+        .box input[type="password"]:focus {
+            width: 280px;
+            border-color: #2ecc71;
+        }
+        .box input[type="submit"]{
+            border: 2px solid #2ecc71;
+            background: none;
+            text-align: center;
+            color: #fff;
+            padding: 14px 40px;
+            display: block;
+            outline: none;
+            border-radius: 24px;
+            margin: 20px auto;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+        .box input[type="submit"]:hover {
+            background: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <form class="box" method="post">
+        <h1>Login</h1>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <input type="submit" id="submit" value="Login">
+    </form>
+</body>
+</html>
