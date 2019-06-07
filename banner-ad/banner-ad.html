@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>banner AD</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .banner {
+            background: #74b9ff;
+            background-size: cover;
+            width: 100%;
+            overflow: hidden;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 100px;
+        }
+        .banner h2 {
+            margin: 0 0 20px 0;
+            font-size: 36px;
+        }
+        .banner a {
+            display: inline-block;
+            font-size: 22px;
+            padding: 10px 22px;
+            background: white;
+            color: #333;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .banner a:hover{
+            background: none;
+            color: #fff;
+        }
+
+        @keyframes wobble {
+            from {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            15% {
+                -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+                transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+            }
+
+            30% {
+                -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+                transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+            }
+
+            45% {
+                -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+                transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+            }
+
+            60% {
+                -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+                transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+            }
+
+            75% {
+                -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+                transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .animated {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .wobble {
+            -webkit-animation-name: wobble;
+            animation-name: wobble;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner animated wobble">
+        <h1>Up To 90% OFF</h1>
+        <h2>Only in GarenStore</h2>
+        <a href="#">Show More</a>
+    </div>
+</body>
+</html>
