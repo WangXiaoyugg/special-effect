@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>earth-sun</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+        
+        }
+        .container {
+            width: 120px;
+            height: 120px;
+            margin: 200px auto;
+            position: relative;
+            padding: 40px;
+        }
+        .sun {
+            width: 120px;
+            height: 120px;
+            background: url('./sun.jpg') no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+        }
+        .earth {
+            width: 40px;
+            height: 40px;
+            background: url('./earth.jpg') no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 20px 20px 10px 2px #000000cc;
+            animation: ro 4s infinite;
+        }
+        @keyframes ro {
+            50% {
+                left: calc(100% - 40px);
+                top: calc(100% - 40px);
+            }
+            100% {
+                z-index: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sun"></div>
+        <div class="earth"></div>
+    </div>
+</body>
+</html>
