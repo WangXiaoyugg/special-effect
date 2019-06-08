@@ -17,4 +17,5 @@
 15. aniiated loading, 利用 rotate
 16. animated AD banner
 17. custom scrollbar
-18. imaga hover effect
+18. image hover effect
+19. eyes follow

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>eyes-follow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: #74b9ff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .eyes {
+            display: flex;
+        }
+        .eye {
+            width: 240px;
+            height: 120px;
+            background: #fff;
+            margin: 40px;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+        }
+        .ball {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 15px solid #333;
+            background: #000;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="eyes">
+        <div class="eye">
+            <div class="ball"></div>
+        </div>
+        <div class="eye">
+            <div class="ball"></div>
+        </div>
+    </div>
+    <script>
+        var balls = document.querySelectorAll('.ball');
+        document.body.onmousemove = function (e) {
+            var x = e.clientX * 100 / window.innerWidth + '%';
+            var y = e.clientY * 100 / window.innerHeight + '%';
+            
+            for(var i = 0; i < balls.length; i++) {
+                balls[i].style.left = x;
+                balls[i].style.top = y;
+                balls[i].style.transform = `translate(-${x}, -${y})`;
+            }
+
+        }
+    </script>
+</body>
+</html>
