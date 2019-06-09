@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>change-body-background</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background:#a29bfe; 
+            transition: 0.5s ease-in-out;
+        }
+        .box {
+            position: absolute;
+            top:40px;
+            right: 40px;
+            padding: 5px;
+            border: 1px solid #eee;
+            background: #fff;
+            display: flex;
+        }
+        .box a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+        }
+        .box a:nth-child(1) {
+            background: #d63031;
+        }
+        .box a:nth-child(2) {
+            background: #55efc4;
+        }
+        .box a:nth-child(3) {
+            background: #74b9ff;
+        }
+        .box a:nth-child(4) {
+            background: #b2bec3;
+        }
+        .box a:nth-child(5) {
+            background: #ffeaa7;
+        }
+        .box a:nth-child(6) {
+            background: #fdcb6e;
+        }
+        .box a:nth-child(7) {
+            background: #fd79a8;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#" data-color="#d63031"></a>
+        <a href="#" data-color="#55efc4"></a>
+        <a href="#" data-color="#74b9ff"></a>
+        <a href="#" data-color="#b2bec3"></a>
+        <a href="#" data-color="#ffeaa7"></a>
+        <a href="#" data-color="#fdcb6e"></a>
+        <a href="#" data-color="#fd79a8"></a>
+
+    </div>
+    <script>
+        let box = document.querySelector(".box");
+        let body = document.body;
+        box.addEventListener('click', function(e){
+            if(e.target.nodeName.toLowerCase() === 'a') {
+                body.style.background = e.target.dataset.color;
+            }
+        })
+    </script>
+</body>
+</html>
