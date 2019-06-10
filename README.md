@@ -21,3 +21,4 @@
 19. eyes follow
 20. sun-earth
 21. change body background color
+22. typing text
