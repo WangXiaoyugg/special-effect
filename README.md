@@ -22,3 +22,4 @@
 20. sun-earth
 21. change body background color
 22. typing text
+23. random color

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>random-color</title>
+    <style>
+        * {margin: 0; padding: 0 ;box-sizing: border-box;}
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #ff7675;
+            font-family: fantasy;
+            transition: background 0.5s;
+        }
+        #hex {
+            color: #fff;
+            margin: 20px;
+            font-family: "Montserrat";
+            font-size: 40px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        #btn {
+            color: #fff;
+            outline: none;
+            border: 1px solid #fff;
+            font-size: 24px;
+            font-family: inherit;
+            padding:5px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="color">
+        <div id='hex'>#ff7675</div>
+        <div id="btn">Get New Color</div>
+    </div>
+    <script>
+       var btn = document.getElementById('btn')
+       var hex = document.getElementById('hex')
+       var symbols = '0123456789ABCDEF'
+ 
+       function getNewColor() {
+           var color = '#';
+           for(var i = 0; i < 6; i++) {
+               color += symbols[Math.floor(Math.random() * 16)];
+           }
+           document.body.style.background = color;
+           hex.textContent = color;
+       }
+       
+       btn.addEventListener('click', getNewColor)
+    </script>
+</body>
+</html>
