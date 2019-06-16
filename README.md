@@ -24,3 +24,7 @@
 22. typing text
 23. random color
 24. tab-image-gallery
+25. full-landing-page
+26. awsome-modal
+27. cover-uncover-image
+28. custom-search-filter

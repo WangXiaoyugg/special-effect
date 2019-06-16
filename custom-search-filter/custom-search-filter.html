@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>custom-search-filter</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        .contacts {
+            margin: 10px auto 0;
+            width: 50%;
+            background: #636e72;
+            overflow: hidden;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .contacts h2 {
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: fantasy;
+        }
+        #search {
+            border-radius: 8px;
+            width: 80%;
+            font-size: 16px;
+            background: #2d3436;
+            border: none;
+            text-indent: 1em;
+            padding: 10px;
+            color: #fff; 
+            outline: none;  
+        }
+        
+        .container {
+            margin: 0 auto;
+            width: 50%;
+            background: #f1f1f1;
+            box-sizing: border-box;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+        .profile .icon {
+            margin: 5px;
+            width: 40px;
+            height: 40px;
+            background: #6c5ce7;
+            border-radius: 50%;
+            text-align:center;
+            line-height: 40px;
+            color:#fff;
+        }
+        .profile .name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="contacts">
+        <h2>Contacts</h2>
+        <input type="text" id="search" placeholder="Type To Search">
+    </div>
+
+    <div class="container">
+        <div class="profile">
+            <span class="icon">A</span>
+            <span class="name">Archie Hansen</span>
+        </div>
+        <div class="profile">
+            <span class="icon">C</span>
+            <span class="name">Celia Wool</span>
+        </div>
+        <div class="profile">
+            <span class="icon">D</span>
+            <span class="name">Danier Spancer</span>
+        </div>
+        <div class="profile">
+            <span class="icon">M</span>
+            <span class="name">Margon Austin</span>
+        </div>
+        <div class="profile">
+            <span class="icon">S</span>
+            <span class="name">Simon Dones</span>
+        </div>
+        <div class="profile">
+            <span class="icon">S</span>
+            <span class="name">Simon Hans</span>
+        </div>
+        <div class="profile">
+            <span class="icon">S</span>
+            <span class="name">Simon Garen</span> 
+        </div>
+        <div class="profile">
+            <span class="icon">S</span>
+            <span class="name">Simon Lary</span> 
+        </div>
+    </div>
+    <script>
+        var search = document.querySelector('#search')
+        function filter() {
+            var value = search.value
+            var profiles = document.querySelectorAll(".profile");
+            for(var i = 0; i < profiles.length; i++) {
+                var name = profiles[i].textContent;
+                if(name.indexOf(value.toUpperCase()) > -1) {
+                    profiles[i].style.display = 'flex';
+                } else {
+                    profiles[i].style.display = 'none';
+                }
+            }
+        }
+        search.addEventListener('input', filter);
+    </script>
+</body>
+</html>
