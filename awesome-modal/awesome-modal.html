@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>awesome-modal</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        .modal-wrapper {
+            position: fixed;
+            bottom: -300px;
+            z-index: -9999;
+            right: 20px;
+            width: 500px;
+            height: 300px;
+            background:#2d3436;
+            font-family: sans-serif;
+            display:flex;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 1s;
+        }
+        .modal-wrapper .left {
+            width: 200px;
+            height: 100%;
+        }
+        .modal-wrapper .right {
+            padding: 15px;
+            box-sizing: border-box;
+            color: #fff;
+            
+        }
+        .modal-wrapper .right h2 {
+            font-size: 24px;
+        }
+
+        .modal-wrapper .right p {
+            font-size: 14px;
+            word-break: break-all;
+        }
+        .modal-wrapper .right .read-more {
+            display: inline-block;
+            text-decoration: none;
+            background:#ff7675;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .modal-wrapper .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #000;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            font-weight: bolder;
+            cursor: pointer;
+            transition: all 1s;
+            opacity: 0.7;
+        }
+        .modal-wrapper .close:hover {
+            transform: rotate(90deg);
+            opacity: 1;
+        }
+
+        .show {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 30px;
+            font-size: 24px;
+            border: 1px solid #fdcb6e;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #fdcb6e;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="modal-wrapper">
+        <img class="left" src="./1.jpeg" alt="">
+        <div class="right">
+            <h2>Awesome Modal</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolores eum eligendi laboriosam nulla fugit dolorem itaque, officiis, ex inventore facilis harum asperiores doloribus animi voluptas reprehenderit cum officia unde.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="close">X</div>
+    </div>
+
+    <a href="#" class="show">Show Modal</a>
+    <script>
+        var show = document.querySelector('.show')
+        var modal = document.querySelector('.modal-wrapper')
+        var close = document.querySelector('.close')
+        function showModal() {
+            modal.style.bottom = '20px';
+        }
+        function closeModal() {
+            modal.style.bottom = '-300px';
+        }
+        show.addEventListener('click', showModal)
+        close.addEventListener('click', closeModal)
+    </script>
+</body>
+</html>
