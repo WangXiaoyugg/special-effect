@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cover-uncover-img</title>
+    <style>
+        * {margin: 0; padding: 0}
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .img-wrapper {
+            overflow: hidden;
+            border-radius: 2px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .img-wrapper .img {
+            width: 300px;
+            height: 600px; 
+            filter: blur(24px);
+            transition: all 0.5s;
+        }
+        .img-wrapper .text {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            transform: translateY(-50%);
+            color: #fff;
+            font-family: sans-serif;
+            text-shadow: 0 0 10px rgba(0,0,0,.7);
+        }
+        .img-wrapper .btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px;
+            background: rgba(0,0,0,.7);
+            color: #fff;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 12px;
+            font-family: fantasy;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="middle">
+        <div class="img-wrapper">
+            <img class="img" src="./2.jpeg" alt="">
+            <p class="text">The photo may have violent content!</p>
+            <button class="btn">Uncover Image</button>
+        </div>
+    </div>
+    <script>
+        var img = document.querySelector('.img')
+        var text = document.querySelector('.text')
+        var btn = document.querySelector('.btn')
+        var isCover = true;
+        function coverImage() {
+            if(isCover) {
+                img.style.filter = 'blur(0)'
+                text.style.display = 'none'
+                btn.textContent = "Cover Image"
+                isCover = false;
+            } else {
+                img.style.filter = 'blur(24px)'
+                text.style.display = 'block'
+                btn.textContent = "Uncover Image"
+                isCover = true;
+            }
+        }
+        btn.addEventListener('click', coverImage)
+    </script>
+</body>
+</html>
