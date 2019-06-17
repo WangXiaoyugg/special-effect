@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>code-review-star</title>
+    <script src="https://kit.fontawesome.com/fc75e1dd40.js"></script>
+    <style>
+        * {margin: 0; padding:0;}
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            direction: rtl;
+        }
+        .fa-star{
+            color:#636e72;
+            font-size: 40px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .fa-star:hover {
+            color: #fdcb6e;
+        }
+        .s1:hover ~ .fa-star{
+            color: #fdcb6e;
+        }
+        .s2:hover ~ .fa-star{
+            color: #fdcb6e;
+        }
+        .s3:hover ~ .fa-star{
+            color: #fdcb6e;
+        }
+        .s4:hover ~ .fa-star{
+            color: #fdcb6e;
+        }
+        .s5:hover ~ .fa-star{
+            color: #fdcb6e;
+        }
+    </style>
+</head>
+<body>
+    <div class="middle">
+        <i class="fas fa-star s1"></i>
+        <i class="fas fa-star s2"></i>
+        <i class="fas fa-star s3"></i>
+        <i class="fas fa-star s4"></i>
+        <i class="fas fa-star s5"></i>
+    </div>
+</body>
+</html>

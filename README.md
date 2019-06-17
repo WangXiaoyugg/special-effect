@@ -28,3 +28,4 @@
 26. awsome-modal
 27. cover-uncover-image
 28. custom-search-filter
+29. code-review-star
