@@ -29,3 +29,4 @@
 27. cover-uncover-image
 28. custom-search-filter
 29. code-review-star
+30. love-reaction

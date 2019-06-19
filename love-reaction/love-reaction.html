@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>image with love Reaction</title>
+    <script src="https://kit.fontawesome.com/fc75e1dd40.js"></script>
+    <style>
+        * {margin: 0; padding: 0;box-sizing: border-box;}
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            cursor: pointer;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        input {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 9999;
+        }
+        .heart {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }  
+        .heart  i {
+            font-size: 50px;
+            color: #f1f1f1;
+            transform: scale(0);
+            transition: all 0.3s;
+        
+        }
+        .middle:hover  i {
+            transform: scale(1);
+        }  
+        .middle input:checked + .heart>i {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="middle">
+        <img src="./bg.jpeg" alt="">
+        <input type="checkbox">
+        <div class="heart">
+            <i class="fas fa-heart"></i>
+        </div>
+    </div>
+</body>
+</html>
