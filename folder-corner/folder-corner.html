@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>floder-corner</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .middle {
+            width: 600px;
+            padding: 60px;
+            font-size: 24px;
+            text-align: justify;
+            font-family: sans-serif;
+            background-color: #e74c3c;
+            color: white;
+            position: relative;
+        }
+        .middle::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-width: 0 40px 40px 0;
+            border-style: solid;
+            border-color: #c0392b #fff;
+        }
+    </style>
+</head>
+<body>
+    <p class="middle">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque optio laboriosam vel? Possimus animi quis saepe illum doloribus consectetur tenetur aut recusandae deserunt, enim quae, itaque aliquid voluptatum at omnis.
+        Ut distinctio cumque odit facilis cupiditate laborum nulla non vero atque, doloribus facere quia pariatur dolorum voluptates nemo reiciendis deleniti accusantium sed exercitationem beatae asperiores assumenda illum saepe officiis! Atque!
+    </p>
+</body>
+</html>
