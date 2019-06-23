@@ -16,7 +16,7 @@ dirs.forEach(dir => {
             console.log("subDir", file);
             if(file.indexOf('.html') > -1) {
                 data.push({
-                    title: file,
+                    title: dir,
                     link: `./${dir}/${file}`
                 })
             }
