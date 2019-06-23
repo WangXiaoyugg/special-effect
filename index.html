@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>前端特效</title>
+    <style>
+     * {margin:0; padding:0; box-sizing:border-box;}
+     li {list-style: none;}
+     html {height: 100%;}
+     body {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        height: 100%;
+     }   
+     .app {
+        width: 400px;
+        padding: 20px;
+        border: 1px solid #eee;
+        background-color: #f39c12;
+        border-radius: 10px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+        color: #fff;
+     }
+     .title {
+        font-size: 32px;
+        font-family: cursive;
+        font-weight: 600;
+     }
+     .list-wrapper {
+        margin-top: 20px;
+        overflow: auto;
+        height: 700px;
+     }
+     .list-wrapper .list-item {
+        position: relative;
+        margin-bottom: 16px;
+     }
+     .list-wrapper .list-item::before {
+        position: absolute; 
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #fff;
+        top: 50%;
+        transform: translateY(-50%);
+     }
+     .list-wrapper .list-item .link {
+        color: #fff;
+        font-size: 20px;
+        font-family: sans-serif;
+        padding-left: 20px;
+        
+     } 
+     .list-wrapper .list-item .link:hover {
+        color: #bdc3c7; 
+     }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <h1 class="title">前端特效</h1>
+        <ul class="list-wrapper"></ul>
+    </div>
+    <script src="./data.js"></script>
+    <script>
+        function genList() {
+            var listWrapper = document.querySelector(".list-wrapper");
+            let htmlStr = ""
+            data && data.forEach(item => {
+                htmlStr += '<li class="list-item">' +
+                    '<a href="'+item.link+'" class="link">'+ item.title+ '</a>' +
+                    '</li>'
+            });
+            listWrapper.innerHTML = htmlStr;
+        }
+        genList();
+    </script>
+</body>
+</html>

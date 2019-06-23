@@ -47,7 +47,7 @@
             width: 280px;
             border-color: #2ecc71;
         }
-        .box input[type="submit"]{
+        .box #submit{
             border: 2px solid #2ecc71;
             background: none;
             text-align: center;
@@ -60,17 +60,22 @@
             transition: 0.25s;
             cursor: pointer;
         }
-        .box input[type="submit"]:hover {
+        .box #submit:hover {
             background: #2ecc71;
         }
     </style>
 </head>
 <body>
-    <form class="box" method="post">
+    <form class="box" method="post" onsubmit="handleSubmit">
         <h1>Login</h1>
         <input type="text" placeholder="Username">
         <input type="password" placeholder="Password">
         <input type="submit" id="submit" value="Login">
     </form>
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+        }
+    </script>
 </body>
 </html>
