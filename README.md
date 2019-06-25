@@ -32,7 +32,7 @@
 30. love-reaction
 31. mouse-scroll
 32. folder-corner
-
+33. img-zoom
 
 ## Todo
 1. icon 地址使用iconfont 替代国外地址
