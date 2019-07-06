@@ -33,6 +33,8 @@
 31. mouse-scroll
 32. folder-corner
 33. img-zoom
+34. endless-road
+35. graident-button
 
 ## Todo
 1. icon 地址使用iconfont 替代国外地址
