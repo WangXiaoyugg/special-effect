@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('./bg.jpg') no-repeat;
+    background-size: cover;
+}
+.focus {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}

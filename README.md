@@ -36,6 +36,7 @@
 34. endless-road
 35. graident-button
 36. jump-text
+37. spotlight-effect
 
 ## Todo
 1. icon 地址使用iconfont 替代国外地址

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spotlight Effect</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section>
+        <div class="focus"></div>
+    </section>
+    <script>
+        document.addEventListener("mousemove", function(e) {
+            let x = e.pageX
+            let y = e.pageY
+            document.querySelector('.focus').style.background = `radial-gradient(circle at ${x}px ${y}px, transparent, #000 30%)`
+        }, false);
+    </script>
+</body>
+</html>
